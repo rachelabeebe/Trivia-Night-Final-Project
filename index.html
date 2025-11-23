@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trivia Night</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="page-wrapper">
+
+  <!-- HEADING -->
+  <h1>Trivia Night</h1>
+
+  <!-- QUIZ SELECTION -->
+  <section id="quiz-selection">
+    <h2>Select a Quiz</h2>
+    <div id="quiz-buttons">
+      <button type="button" data-quiz="quiz1">General Knowledge</button>
+      <button type="button" data-quiz="quiz2">Science</button>
+      <button type="button" data-quiz="quiz3">Geography</button>
+    </div>
+  </section>
+
+  <!-- ==========================
+       QUIZ 1 — GENERAL KNOWLEDGE
+       ========================== -->
+  <div id="quiz1" class="quiz-container">
+    <form>
+      <!-- Q1 -->
+      <fieldset>
+        <legend>1.) True or False: An octopus has three hearts.</legend>
+        <label><input type="radio" name="quiz1-q1" value="true"> True</label>
+        <label><input type="radio" name="quiz1-q1" value="false"> False</label>
+        <img src="octopus.jpg" alt="Octopus" class="question-image">
+        <button type="button" class="check" data-q="quiz1-q1">Submit Answer</button>
+        <div class="answer" id="quiz1-ans1"></div>
+      </fieldset>
+
+      <!-- Q2 -->
+      <fieldset>
+        <legend>2.) What is the largest organ in the human body?</legend>
+        <label><input type="radio" name="quiz1-q2" value="a"> Lungs</label>
+        <label><input type="radio" name="quiz1-q2" value="b"> Liver</label>
+        <label><input type="radio" name="quiz1-q2" value="c"> Skin</label>
+        <label><input type="radio" name="quiz1-q2" value="d"> Bones</label>
+        <img src="bodydiagram.jpg" alt="Body Diagram" class="question-image">
+        <button type="button" class="check" data-q="quiz1-q2">Submit Answer</button>
+        <div class="answer" id="quiz1-ans2"></div>
+      </fieldset>
+
+      <!-- Q3 -->
+      <fieldset>
+        <legend>3.) What is the capital of Australia?</legend>
+        <label><input type="radio" name="quiz1-q3" value="a"> Adelaide</label>
+        <label><input type="radio" name="quiz1-q3" value="b"> Sydney</label>
+        <label><input type="radio" name="quiz1-q3" value="c"> Perth</label>
+        <label><input type="radio" name="quiz1-q3" value="d"> Canberra</label>
+        <img src="kangaroo.jpg" alt="Kangaroo" class="question-image">
+        <button type="button" class="check" data-q="quiz1-q3">Submit Answer</button>
+        <div class="answer" id="quiz1-ans3"></div>
+      </fieldset>
+
+      <!-- Q4 -->
+      <fieldset>
+        <legend>4.) The Amazon River flows primarily through which country?</legend>
+        <label><input type="radio" name="quiz1-q4" value="a"> Peru</label>
+        <label><input type="radio" name="quiz1-q4" value="b"> Brazil</label>
+        <label><input type="radio" name="quiz1-q4" value="c"> Venezuela</label>
+        <label><input type="radio" name="quiz1-q4" value="d"> Colombia</label>
+        <img src="amazonriver.jpg" alt="Amazon River" class="question-image">
+        <button type="button" class="check" data-q="quiz1-q4">Submit Answer</button>
+        <div class="answer" id="quiz1-ans4"></div>
+      </fieldset>
+      <div id="q1final-container">
+      <button type="button" id="quiz1-final">Get Final Score</button>
+      <button type="button" id="quiz1-resetBtn">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ==========================
+       QUIZ 2 — SCIENCE
+       ========================== -->
+  <div id="quiz2" class="quiz-container">
+    <form>
+      <!-- Q1 -->
+      <fieldset>
+        <legend>1.) What planet is known as the Red Planet?</legend>
+        <label><input type="radio" name="quiz2-q1" value="a"> Venus</label>
+        <label><input type="radio" name="quiz2-q1" value="b"> Mars</label>
+        <label><input type="radio" name="quiz2-q1" value="c"> Jupiter</label>
+        <label><input type="radio" name="quiz2-q1" value="d"> Saturn</label>
+        <img src="mars.jpg" alt="Red Planet" class="question-image">
+        <button type="button" class="check" data-q="quiz2-q1">Submit Answer</button>
+        <div class="answer" id="quiz2-ans1"></div>
+      </fieldset>
+
+      <!-- Q2 -->
+      <fieldset>
+        <legend>2.) Water boils at what temperature (°C)?</legend>
+        <label><input type="radio" name="quiz2-q2" value="a"> 50°C</label>
+        <label><input type="radio" name="quiz2-q2" value="b"> 100°C</label>
+        <label><input type="radio" name="quiz2-q2" value="c"> 200°C</label>
+        <label><input type="radio" name="quiz2-q2" value="d"> 0°C</label>
+        <img src="boilingwater.jpg" alt="Boiling Water" class="question-image">
+        <button type="button" class="check" data-q="quiz2-q2">Submit Answer</button>
+        <div class="answer" id="quiz2-ans2"></div>
+      </fieldset>
+
+      <!-- Q3 -->
+      <fieldset>
+        <legend>3.) What gas do plants absorb for photosynthesis?</legend>
+        <label><input type="radio" name="quiz2-q3" value="a"> Oxygen</label>
+        <label><input type="radio" name="quiz2-q3" value="b"> Carbon Dioxide</label>
+        <label><input type="radio" name="quiz2-q3" value="c"> Nitrogen</label>
+        <label><input type="radio" name="quiz2-q3" value="d"> Hydrogen</label>
+        <img src="photosynthesis.jpg" alt="Photosynthesis" class="question-image">
+        <button type="button" class="check" data-q="quiz2-q3">Submit Answer</button>
+        <div class="answer" id="quiz2-ans3"></div>
+      </fieldset>
+
+      <!-- Q4 -->
+      <fieldset>
+        <legend>4.) What is the chemical symbol for water?</legend>
+        <label><input type="radio" name="quiz2-q4" value="a"> H2O</label>
+        <label><input type="radio" name="quiz2-q4" value="b"> CO₂</label>
+        <label><input type="radio" name="quiz2-q4" value="c"> O₂</label>
+        <label><input type="radio" name="quiz2-q4" value="d"> NaCl</label>
+        <img src="water.jpg" alt="Water" class="question-image">
+        <button type="button" class="check" data-q="quiz2-q4">Submit Answer</button>
+        <div class="answer" id="quiz2-ans4"></div>
+      </fieldset>
+      <div id="q2final-container">
+      <button type="button" id="quiz2-final">Get Final Score</button>
+      <button type="button" id="quiz2-resetBtn">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ==========================
+       QUIZ 3 — GEOGRAPHY
+       ========================== -->
+  <div id="quiz3" class="quiz-container">
+    <form>
+      <!-- Q1 -->
+      <fieldset>
+        <legend>1.) What is the capital of France?</legend>
+        <label><input type="radio" name="quiz3-q1" value="a"> Paris</label>
+        <label><input type="radio" name="quiz3-q1" value="b"> Lyon</label>
+        <label><input type="radio" name="quiz3-q1" value="c"> Marseille</label>
+        <label><input type="radio" name="quiz3-q1" value="d"> Nice</label>
+        <img src="france.jpeg" alt="Eiffel Tower" class="question-image">
+        <button type="button" class="check" data-q="quiz3-q1">Submit Answer</button>
+        <div class="answer" id="quiz3-ans1"></div>
+      </fieldset>
+
+      <!-- Q2 -->
+      <fieldset>
+        <legend>2.) Which continent is Egypt part of?</legend>
+        <label><input type="radio" name="quiz3-q2" value="a"> Asia</label>
+        <label><input type="radio" name="quiz3-q2" value="b"> Africa</label>
+        <label><input type="radio" name="quiz3-q2" value="c"> Europe</label>
+        <label><input type="radio" name="quiz3-q2" value="d"> South America</label>
+        <img src="egypt.jpg" alt="Great Pyramids" class="question-image">
+        <button type="button" class="check" data-q="quiz3-q2">Submit Answer</button>
+        <div class="answer" id="quiz3-ans2"></div>
+      </fieldset>
+
+      <!-- Q3 -->
+      <fieldset>
+        <legend>3.) What is the longest river in the world?</legend>
+        <label><input type="radio" name="quiz3-q3" value="a"> Nile</label>
+        <label><input type="radio" name="quiz3-q3" value="b"> Amazon</label>
+        <label><input type="radio" name="quiz3-q3" value="c"> Yangtze</label>
+        <label><input type="radio" name="quiz3-q3" value="d"> Mississippi</label>
+        <img src="river.jpeg" alt="River" class="question-image">
+        <button type="button" class="check" data-q="quiz3-q3">Submit Answer</button>
+        <div class="answer" id="quiz3-ans3"></div>
+      </fieldset>
+
+      <!-- Q4 -->
+      <fieldset>
+        <legend>4.) Which country has the largest population?</legend>
+        <label><input type="radio" name="quiz3-q4" value="a"> USA</label>
+        <label><input type="radio" name="quiz3-q4" value="b"> India</label>
+        <label><input type="radio" name="quiz3-q4" value="c"> China</label>
+        <label><input type="radio" name="quiz3-q4" value="d"> Russia</label>
+        <img src="population.jpg" alt="Large Group of People" class="question-image">
+        <button type="button" class="check" data-q="quiz3-q4">Submit Answer</button>
+        <div class="answer" id="quiz3-ans4"></div>
+      </fieldset>
+      <div id="q3final-container">
+      <button type="button" id="quiz3-final">Get Final Score</button>
+      <button type="button" id="quiz3-resetBtn">Reset</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- WARNING & RESULT -->
+  <div id="warning"></div>
+  <div id="result" role="status" aria-live="polite"></div>
+
+</div>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>

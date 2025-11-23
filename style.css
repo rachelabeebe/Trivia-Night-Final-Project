@@ -1,0 +1,290 @@
+/* =========================================================
+   GLOBAL PAGE STYLES
+   ========================================================= */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* prevent extra space at bottom */
+}
+
+body {
+  font-family: "Segoe UI", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  text-align: center;
+
+  /* Background Gradient */
+  background: radial-gradient(circle at top left, #050a44, #041c3f);
+}
+
+/* Center the entire page layout */
+#page-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  transform: scale(0.82);
+  transform-origin: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: auto; /* remove forced extra height */
+  padding-bottom: 20px; /* optional small padding */
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  color: #3b5fff;
+  font-style: italic;
+  text-shadow: 0px 6px 10px rgb(199, 164, 10);
+  letter-spacing: 2px;
+}
+
+h2 {
+  color: #ffeb3b;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* =========================================================
+   QUIZ SELECTION BUTTONS
+   ========================================================= */
+
+#quiz-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+#quiz-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+#quiz-buttons button {
+  background-color: #cca736;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s ease;
+}
+
+#quiz-buttons button:hover {
+  background-color: #e4b92b;
+  transform: translateY(-3px);
+}
+
+#quiz-buttons button:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================
+   QUIZ CONTAINERS
+   ========================================================= */
+
+.quiz-container {
+  display: none;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 30px;
+  width: 90%;
+  max-width: 850px;
+  margin: 20px auto;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  text-align: left;
+}
+
+/* =========================================================
+   QUESTION BLOCKS
+   ========================================================= */
+
+fieldset {
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 20px;
+  margin-bottom: 28px;
+  display: block;
+}
+
+legend {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #8c8c8c;
+  color: #000;
+  font-weight: 600;
+  padding: 6px 10px;
+  margin: 6px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+fieldset label:hover {
+  background-color: #b5b5b5;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+  accent-color: #ffca28;
+}
+
+/* Animated Feedback Text */
+.answer {
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.4rem;
+  margin-top: 10px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.25s ease;
+}
+
+.answer.show {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.answer.correct {
+  color: #5cff3b;
+}
+
+.answer.incorrect {
+  color: red;
+}
+
+/* =========================================================
+   IMAGES UNDER QUESTIONS
+   ========================================================= */
+
+.question-image {
+  display: block;
+  max-width: 65%;
+  margin: 10px auto 15px auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.question-image:hover {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   BUTTONS IN QUIZZES
+   ========================================================= */
+
+button.check {
+  display: block;
+  margin: 15px auto 5px auto;
+}
+
+button {
+  background-color: #cca736;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  color: #212121;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+button:hover {
+  background-color: #e4b92b;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+#reset,
+[id$="resetBtn"] {
+  background-color: #a51212;
+  color: #fff;
+}
+
+#reset:hover,
+[id$="resetBtn"]:hover {
+  background-color: #f10e0e;
+}
+
+/* =========================================================
+   FINAL SCORE & WARNING
+   ========================================================= */
+
+#result {
+  margin-top: 20px;
+  margin-bottom: 0; /* remove extra bottom margin */
+  font-size: 3rem;
+  font-weight: bold;
+  color: #5cff3b;
+  text-shadow: 0 0 10px rgba(255, 235, 59, 0.4);
+  text-align: center;
+  opacity: 1;
+  display: inline-block; /* prevent extra block spacing */
+  transition: all 0.3s ease;
+}
+
+#warning {
+  color: #ffeb3b;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-top: 10px;
+  text-align: center;
+  display: block;
+}
+
+/* Final Score & Reset Buttons Container */
+[id^="q"][id$="final-container"] {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+
+  #quiz-buttons button {
+    width: 90%;
+  }
+
+  .quiz-container {
+    padding: 20px;
+  }
+
+  .question-image {
+    max-width: 85%;
+  }
+}
